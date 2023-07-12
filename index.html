@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Об'єм піраміди</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+
+        <div class="header_container">
+            <nav class="nav">
+                <div class="nav-item" onclick="showCalculator()">Калькулятор</div>
+                <div class="nav-item" onclick="showInstuctions()">Інструкція</div>
+                <div class="nav-item" onclick="showTheory()">Теорія</div>
+            </nav>
+
+            <h1>Онлайн калькулятор. Об'єм циліндра</h1>
+            
+        </div>
+            
+
+        <div class="content" id="Calculator">
+
+            <div class="content_calculator">
+
+                <div class="content_data_container">
+
+                    <div class="content_data">
+                    
+                        <div class="content_flex">
+                            <select id="Select" onchange="showFields()">
+                                <option value="radiusHeight" selected>Через радіус основи і висоту</option>
+                                <option value="areaHeight">Через площу основи і висоту</option>
+                            </select>
+
+                            <div class="radius" id="radiusField">
+                                <label for="radius">Радіус: </label>
+                                <input type="number" id="radius">
+                            </div>
+
+                            <div class="base_line" id="areaField">
+                                <label for="base">Площа: </label>
+                                <input type="number" id="base">
+                            </div>
+                        
+                            <div class="height_line" id="heightField">
+                                <label for="height">Висота: </label>
+                                <input type="number" id="height">
+                            </div>
+                            
+                            <button onclick="calculate()" class="calculator_button">Знайти об'єм</button>
+                            
+                        </div>
+                        
+                        <div class="image">
+                            <img src="./img/287039.png" alt="cylinder">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="results">
+                    <h2>Результат:</h2>
+                    <p id="result"></p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="content" id="Instuctions">
+            <div class="content_data_container">
+                <h2>Ввід даних в калькулятор для обчислення об'єму циліндра</h2>
+                <div class="instuctions_data">
+                    <h3>Ввод чисел:</h3>
+                    <ul>
+                        <li>
+                            Цілі числа.<br>
+                            Наприклад: 2; 0; -6.    
+                        </li>
+                        <li>
+                            Десяткові дроби вводятся через крапку. <br>             
+                            Наприклад: 1.2; -0.4.
+                        </li>
+                    </ul>
+                    <p>Дужки, літери, операції додавання, віднімання, множення, піднесення до степеня та інші в калькуляторах та вправах на даний момент не підтримуються!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content" id="Theory">
+            <h2 class="theory_caption">Теорія. Об'єм циліндра</h2>
+            <div class="content_theory_container">
+
+                <div class="content_theory">
+                    <p class="theory_descr"><b>Циліндр</b> - геометричне тіло, обмежене циліндричною поверхнею і двома паралельними площинами (основами), що перетинають її. Відстань між основами – висота циліндра</p>
+                    <img src="./img/287039.png" alt="cylinder">
+                </div>
+               
+                <div class="theory_formula">
+                    <h3 class="formula_caption"><b>Формули</b> для обчислення об'єму циліндра</h3>
+                    <p class="formula"><br>V = So * h <br><br> V = π * R^2 * h <br><br> </p>
+                    <p class="formula_vol">де V - об'єм циліндра,<br><br>
+                        So - площа основи циліндра,<br><br>
+                        R - радіус основи циліндра,<br><br>
+                        h - висота циліндра,<br><br>
+                        π = 3.141592.
+                    </p>
+                </div>
+                
+            </div>
+
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+    <script src="./js/calculator.js"></script>
+</body>
+</html>
